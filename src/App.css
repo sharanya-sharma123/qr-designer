@@ -1,0 +1,27 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #f1f5f9; color: #0f172a; }
+.app { max-width: 1000px; margin: 0 auto; padding: 16px; display: grid; gap: 16px; }
+h1 { font-size: 1.5rem; margin: 8px 0; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.card { background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 1px 4px #0001; display: flex; flex-direction: column; gap: 10px; }
+label { display: flex; flex-direction: column; gap: 4px; font-size: .85rem; font-weight: 600; flex: 1; }
+input, textarea, select { padding: 8px; border: 1px solid #cbd5e1; border-radius: 8px; font: inherit; }
+input[type=color] { padding: 2px; height: 38px; width: 100%; }
+button { padding: 8px 12px; border: 1px solid #cbd5e1; background: #fff; border-radius: 8px; cursor: pointer; font: inherit; }
+button.active { background: #2563eb; color: #fff; border-color: #2563eb; }
+button.primary { background: #16a34a; color: #fff; border: 0; padding: 12px; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+.tabs, .presets, .row { display: flex; flex-wrap: wrap; gap: 8px; }
+.between { justify-content: space-between; align-items: center; }
+.swatch { border: 2px solid; border-radius: 4px; margin-right: 6px; padding: 0 4px; }
+.preview { align-items: center; }
+.preview canvas { max-width: 100%; height: auto !important; border: 1px solid #e2e8f0; }
+.placeholder { padding: 60px 20px; text-align: center; color: #64748b; border: 2px dashed #cbd5e1; border-radius: 8px; }
+.error { color: #dc2626; margin: 0; font-size: .85rem; }
+.warn { color: #b45309; background: #fef3c7; padding: 6px 10px; border-radius: 6px; margin: 0; font-size: .8rem; align-self: stretch; }
+.muted { color: #64748b; font-size: .85rem; }
+h3 { margin: 6px 0 0; font-size: 1rem; }
+.recent { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.recent button { display: flex; flex-direction: column; text-align: left; gap: 2px; overflow: hidden; }
+.recent span { font-size: .75rem; color: #64748b; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
