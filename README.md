@@ -1,16 +1,35 @@
-# React + Vite
+# QR Code Generator & Designer
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Live demo: https://qr-designer-xi.vercel.app
 
-Currently, two official plugins are available:
+A browser-only QR code generator built with React, Vite and the `qrcode` library. No backend needed.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- QR types: URL, Text, Email, Phone, Wi-Fi (inputs change with the selected type)
+- Real-time preview
+- Customization: size, margin, foreground/background colour, error correction level
+- 5 visual presets, which can be edited after selecting
+- Download as PNG (matches the preview)
+- Input validation with clear error messages
+- Scan reliability warnings (low contrast, inverted colours, small size, small margin)
+- Recent QR codes saved in localStorage (survive refresh) and reusable
+- Responsive layout for desktop and mobile
 
-## React Compiler
+## Tech Stack
+React, Vite, JavaScript, CSS, qrcode, Vercel
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Run Locally
+    npm install
+    npm run dev
 
-## Expanding the Oxlint configuration
+## Testing Done
+- All 5 QR types generate correctly
+- Size, margin, colour and error correction update the preview instantly
+- Invalid inputs show errors
+- Downloaded PNG scanned successfully with a phone
+- Recent codes persist after page refresh
+- Checked mobile layout in browser DevTools
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Screenshots
+![Wi-Fi QR](screenshots/2-wifi.png)
+![Mobile view](screenshots/3-mobile.png)
